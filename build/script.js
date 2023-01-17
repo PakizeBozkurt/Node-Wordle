@@ -42,9 +42,6 @@ function shadeKeyBoard(letter, color) {
   }
 }
 
-
-initBoard();
-
 function insertLetter(pressedKey) {
   if (nextLetter === 5) {
     return;
@@ -161,7 +158,6 @@ function checkGuess() {
   }
 }
 
-
 function checkGuess() {
   let row = document.getElementsByClassName("letter-row")[6 - guessesRemaining];
   let guessString = "";
@@ -263,3 +259,4 @@ const animateCSS = (element, animation, prefix = "animate__") =>
 
     node.addEventListener("animationend", handleAnimationEnd, { once: true });
   });
+initBoard();
